@@ -8,26 +8,6 @@ type CustomChain = {
 
 type Chain = CustomChain & WagmiChain;
 
-const xdai: Chain = {
-  id: 100,
-  name: 'Gnosis Chain',
-  network: 'gnosis',
-  iconUrl: 'https://i.imgur.com/lL4RlAZ.png',
-  iconBackground: '#fff',
-  nativeCurrency: {
-    decimals: 18,
-    name: 'xDai',
-    symbol: 'XDAI',
-  },
-  rpcUrls: {
-    default: 'https://rpc.gnosischain.com',
-  },
-  blockExplorers: {
-    default: { name: 'BlockScout', url: 'https://blockscout.com/poa/xdai' },
-  },
-  testnet: false,
-};
-
 const zkevm: Chain = {
   id: 1422,
   name: 'Polygon ZKEVM Testnet',
