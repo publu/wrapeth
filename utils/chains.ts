@@ -1,7 +1,5 @@
-import { chain, configureChains, Chain as WagmiChain } from 'wagmi';
-import { infuraProvider } from 'wagmi/providers/infura';
+import { configureChains, Chain as WagmiChain } from 'wagmi';
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
-import { alchemyProvider } from 'wagmi/providers/alchemy';
 
 type CustomChain = {
   iconUrl: string;
