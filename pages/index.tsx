@@ -18,7 +18,7 @@ export interface AppProps {
 }
 
 /**
- * Primary UI component for user interaction
+ * Primary UI component for user interaction 
  */
 const App: React.FC<AppProps> = ({ children }: AppProps) => {
   const [deposit, setDeposit] = useState<boolean>(true);
