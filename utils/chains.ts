@@ -30,19 +30,38 @@ const xdai: Chain = {
   testnet: false,
 };
 
+const zkevm: Chain = {
+  id: 1422,
+  name: 'Polygon ZKEVM Testnet',
+  network: 'zkevmtest',
+  iconUrl: 'https://polygon.technology/_nuxt/img/hermez.739fdde.svg',
+  iconBackground: '#6a0dad',
+  nativeCurrency: {
+    decimals: 18,
+    name: 'WETH',
+    symbol: 'WETH',
+  },
+  rpcUrls: {
+    default: 'https://rpc.public.zkevm-test.net',
+  },
+  blockExplorers: {
+    default: { name: 'JordiScout', url: 'https://explorer.public.zkevm-test.net' },
+  },
+  testnet: true,
+};
+
 export const { chains, provider } = configureChains(
   [
-    chain.mainnet,
+/*    chain.mainnet,
     xdai,
     chain.polygon,
     chain.arbitrum,
     chain.optimism,
     chain.goerli,
-    chain.sepolia,
+    chain.sepolia,*/
+    zkevm,
   ],
   [
-    infuraProvider({ apiKey: process.env.NEXT_PUBLIC_RPC_KEY }),
-    alchemyProvider({ apiKey: process.env.NEXT_PUBLIC_ALCHEMY_KEY }),
     jsonRpcProvider({
       rpc: (localChain: any) => ({
         http: localChain.rpcUrls.default,

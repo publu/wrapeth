@@ -77,6 +77,7 @@ const App: React.FC<AppProps> = ({ children }: AppProps) => {
         </Container>
 
         <Flex justify='flex-end' width='100%' my='6' mr='48px'>
+          Forked form a project that was 
           <BuiltByRaidGuildComponent />
         </Flex>
       </Container>
